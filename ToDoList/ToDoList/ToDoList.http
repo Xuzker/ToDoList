@@ -1,6 +1,40 @@
 @ToDoList_HostAddress = http://localhost:5141
 
-GET {{ToDoList_HostAddress}}/weatherforecast/
+### Получить все задачи
+GET {{ToDoList_HostAddress}}/api/todo
 Accept: application/json
+
+###
+
+### Получить задачу по ID
+GET {{ToDoList_HostAddress}}/api/todo/1
+Accept: application/json
+
+###
+
+### Создать задачу
+POST {{ToDoList_HostAddress}}/api/todo
+Content-Type: application/json
+
+{
+  "title": "Выучить C# Web API",
+  "isDone": false
+}
+
+###
+
+### Обновить задачу
+PUT {{ToDoList_HostAddress}}/api/todo/1
+Content-Type: application/json
+
+{
+  "title": "Выучить C# Web API (обновлено)",
+  "isDone": true
+}
+
+###
+
+### Удалить задачу
+DELETE {{ToDoList_HostAddress}}/api/todo/1
 
 ###
