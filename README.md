@@ -52,7 +52,8 @@ http://localhost:8080/api/todo
 | DELETE | `/api/todo/{id}`  | Удалить задачу               |
 
 📂 Пример JSON задачи
-``bash
+
+```json
 {
   "title": "Купить молоко",
   "isDone": false
